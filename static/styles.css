@@ -1,0 +1,85 @@
+.blue-split {
+    background-color: blue;
+
+    color: #F39800;
+}
+#q
+{
+    /* Override typeahead.js's transparent background */
+    background-color: #ffffff !important;
+}
+#user_comment {
+    width: 40%;
+    height: 100px;
+}
+#rating {
+    width: 12%;
+}
+/* Stylize typeahead.js a la http://twitter.github.io/typeahead.js/css/examples.css */
+.tt-menu
+{
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 1px;
+    max-height: 150px;
+    overflow-y: auto;
+    width: 300px;
+}
+.tt-suggestion.tt-cursor {
+    background-color: #0097cf;
+    color: #fff;
+    cursor: pointer;
+}
+.tt-suggestion {
+    margin: 0;
+    padding: 6px 12px;
+}
+
+nav .navbar-brand
+{
+    /* size for brand */
+    font-size: xx-large;
+}
+main .form-control
+{
+    /* center form controls */
+    display: inline-block;
+
+    /* override Bootstrap's 100% width for form controls */
+    width: auto;
+}
+
+main
+{
+    /* scroll horizontally as needed */
+    overflow-x: auto;
+
+    /* center contents */
+    text-align: center;
+}
+
+main img
+{
+    /* constrain images on small screens */
+    max-width: 100%;
+}
+main .alert
+{
+    display: none;
+
+    width: auto;
+}
+.lefties
+{
+    padding-right: 200px;
+}
+.lefties .less {
+    padding-right: 100px;
+}
+.table {
+    width:auto;
+}
+.bg-dark {
+    width: auto;
+}

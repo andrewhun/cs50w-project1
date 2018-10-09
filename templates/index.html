@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block main %}
+	<div class = "jumbotron">
+		<h1 class = "display-4">Welcome to Books!</h1>
+		<p class = "lead">Here you can find information and reviews regarding 5000 books. Got a review of your own? 
+		You can write one for each book! Start your journey in the world of Books now!
+		</p>
+		<hr class = "my-4">
+		<p> You can get started by using the search form below. ISBN, author and title are all playing. Use any you like to find the books you like.</p>
+		<form id = "searchform">
+			<div class = form-group>
+				Search for books:
+				<input type = "text" id = "q" class = "form-control" placeholder="Search" autofocus>
+			</div>
+		</form>
+	</div>
+{% endblock %}

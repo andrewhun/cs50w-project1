@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}Log In{% endblock %}
+
+{% block main %}
+	<form id = "login" action = "/login" method = "POST">
+		<div class = "form-group">
+			<p class = "lefties">Username*</p>
+			<input type = "text" required autofocus id = "login_user" name = "login_user" placeholder="Username" class = "form-control"/>
+		</div>
+		<div class = "alert alert-danger" id = "loginuser"></div>
+		<div class = "form-group">
+			<p class = "lefties">Password*</p>
+			<input type = "password" required id = "login_pw" name = "login_pw" placeholder="Password" class = "form-control"/>
+		</div>
+		<div class = "alert alert-danger" id = "loginpw"></div>
+		<button class = "btn btn-primary" type = "submit">Log In</button>
+	</form>
+{% endblock %}

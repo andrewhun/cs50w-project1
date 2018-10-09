@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %} {{ title }} {% endblock %}
+
+{% block main %}
+	<div class = "jumbotron">
+		<h1 class = "display-4">{{ title }}</h1>
+		<p class = "lead">Author: {{ author }}</p>
+		<p class = "lead">ISBN: {{ isbn }}</p>
+		<p class = "lead">Published in: {{ year }}</p>
+		<hr class = "my-4">
+		<h2 class = "display-4">Goodreads data</h2>
+		<p class = "lead">Ratings count: {{ ratings_count }}</p>
+		<p class = "lead">Average rating: {{ average_rating }}</p>
+		<hr class = "my-4">
+		<h2 class = "display-4">Reviews</h2>
+		{% for i in range(j) %}
+		<p class = "lead lefties">{{ my_comments[i].username }}:</p>
+		<p>Rating: {{ my_comments[i].rating }}</p>
+		<p>{{ my_comments[i].message }}</p>
+		{% endfor %}
+		<div class = "form-group">
+			<form id = "comment" action = "/book/{{ isbn }}" method = "post">
+				<p class = "lead">Leave a rating and a review (1 per book):</p>
+				<p class = "lefties less"> (1-5, where 1 is the worst and 5 is the best possible rating):
+				<input type = "number" id = "rating" name = "rating" min = "1" max = "5" required placeholder="Rating" class = "form-control" />
+				</p>
+				<input type = "text" id = "user_comment" name = "user_comment" required class = "form-control" placeholder="Review goes here" />
+				<button class = "btn btn-primary" type = "submit">Submit</button>
+			</form>
+		</div>
+		<div class = "alert alert-danger" id = "commenterror"></div>
+	</div>
+	
+{% endblock %}
